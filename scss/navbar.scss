@@ -32,6 +32,7 @@
     filter: grayscale(0%) opacity(1);
     color: var(--text);
     background: var(--bg-navbar-hover);
+    z-index: 1;
 
 }
 .icon {
@@ -73,6 +74,7 @@
 /* Animations */
 .navbar:hover{
     width: 12rem;
+    z-index: 1;
 }
 .navbar:hover .link-text {
     display: block;

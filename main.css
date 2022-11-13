@@ -151,6 +151,7 @@ main {
   filter: grayscale(0%) opacity(1);
   color: var(--text);
   background: var(--bg-navbar-hover);
+  z-index: 1;
 }
 
 .icon {
@@ -193,6 +194,7 @@ main {
 /* Animations */
 .navbar:hover {
   width: 12rem;
+  z-index: 1;
 }
 
 .navbar:hover .link-text {
@@ -220,6 +222,7 @@ main {
     transition: height 300ms ease;
     position: fixed;
     height: 15%;
+    z-index: 1;
   }
   .link-text .link-logo .logo {
     display: none;
@@ -228,6 +231,7 @@ main {
     height: 70%;
     width: 100vw;
     overflow-y: scroll;
+    z-index: 1;
   }
   .logo .icon {
     transform: rotate(90deg);
@@ -260,6 +264,7 @@ main {
     transition: height 300ms ease;
     position: fixed;
     height: 15%;
+    z-index: 1;
   }
   .link-text .link-logo .logo {
     display: none;
@@ -268,6 +273,7 @@ main {
     height: 70%;
     width: 100vw;
     overflow-y: scroll;
+    z-index: 1;
   }
   .logo .icon {
     transform: rotate(90deg);
@@ -300,6 +306,7 @@ main {
     transition: height 300ms ease;
     position: fixed;
     height: 15%;
+    z-index: 1;
   }
   .link-text .link-logo .logo {
     display: none;
@@ -308,6 +315,7 @@ main {
     height: 70%;
     width: 100vw;
     overflow-y: scroll;
+    z-index: 1;
   }
   main {
     font-size: 14px;

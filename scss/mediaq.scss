@@ -6,6 +6,7 @@
         transition: height 300ms ease;
         position: fixed; 
         height: 15%;
+        z-index: 1;
     }
     .link-text .link-logo .logo {
         display: none;
@@ -14,6 +15,7 @@
         height: 70%;
         width: 100vw;
         overflow-y: scroll;
+        z-index: 1;
     }
     .logo .icon {
         transform: rotate(90deg);
@@ -46,6 +48,7 @@
         transition: height 300ms ease;
         position: fixed; 
         height: 15%;
+        z-index: 1;
     }
     .link-text .link-logo .logo {
         display: none;
@@ -54,6 +57,7 @@
         height: 70%;
         width: 100vw;
         overflow-y: scroll;
+        z-index: 1;
     }
     .logo .icon {
         transform: rotate(90deg);
@@ -87,6 +91,7 @@
         transition: height 300ms ease;
         position: fixed; 
         height: 15%;
+        z-index: 1;
     }
     .link-text .link-logo .logo {
         display: none;
@@ -95,6 +100,7 @@
         height: 70%;
         width: 100vw;
         overflow-y: scroll;
+        z-index: 1;
     }
     main{
         font-size: 14px;
