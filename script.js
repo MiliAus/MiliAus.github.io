@@ -68,4 +68,4 @@ lightButton.onclick = () => {
   } else {
     turnLight();
   }
-}; // end lightButton
+}; // end lightButton/
