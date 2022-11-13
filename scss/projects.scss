@@ -1,0 +1,40 @@
+.projects-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 10%;
+    margin-left: 5rem; 
+    height: 100%;  
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.projects-container > div {
+   border: 5px solid black;
+   width: 100%;
+   text-align: center;
+   
+   
+}
+.pictures{
+    height: 100px;
+    width: 100px;
+}
+button{
+    cursor: pointer;
+    height: 35px;
+    width: 125px;
+    margin-top: auto; 
+    align-self: center;
+    flex: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+ 

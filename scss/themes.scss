@@ -1,0 +1,31 @@
+.dark{
+    --bg: var(--dark);
+    --bg-navbar: rgb(46, 46, 46);
+    --text: var(--white);
+    --logo-hover: var(--medium-dark);
+    --bg-logo: var(--light-grey);
+    --bg-navbar-hover: var(--dark);
+    --logo-bg: rgba(0, 0, 0, 0.267);
+
+
+}
+.light{
+    --bg: var(--white);
+    --bg-navbar: rgb(214, 214, 214);
+    --text: var(--dark);
+    --logo-hover: var(--medium-dark);
+    --bg-logo: var(--light-grey);
+    --bg-navbar-hover: var(--white);
+    --logo-bg: rgba(255, 251, 251, 0.486);
+    
+
+}
+
+#dark::before {
+    background: #2a2e35;
+}
+
+#light::before {
+    background: #ffffff;
+}
+/*########################## END ##########################*/

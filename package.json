@@ -1,0 +1,11 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "index.js",
+  "author": "Austin Leverett",
+  "license": "MIT",
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}

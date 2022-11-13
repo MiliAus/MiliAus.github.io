@@ -1,0 +1,91 @@
+#################################################################################################!!
+# Beginning of the YML file                                                                     #
+# documentation can be found here: https://yaml.org/spec/1.2.2/#chapter-1-introduction-to-yaml) #
+#################################################################################################
+name: LevCI #name of workflow as it will appear in Actions
+on:
+  workflow_dispatch: #allows you use run the workflow manually in github actions
+######################################
+#    Set Permissions for the token   #
+######################################
+
+#More information found here: --> https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
+permissions:
+  contents: read
+  #deployments: read
+  #id-token: read
+  issues: read
+  #metadata: read set to read by default
+  #packages: read
+  #pages: read
+  #pull-requests: read
+  #repository-projects: read
+  #security-events: read
+  statuses: write
+
+jobs:
+  ####################################################################
+  # Check Status of Github, which must pass before Linting can run   #
+  ####################################################################
+  Check_Github_Status:
+    name: Check Github Status
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Github Status
+        uses: crazy-max/ghaction-github-status@11800cf081427ec689e7f34f287f9e0c85ae6826
+
+  Linter: #name this whatever you want the job id to be called
+    needs: Check_Github_Status #needs Job-1 to pass before running (Github Status)
+    name: Super Linter #this is what will appear as the job name in Actions workflow, this can be named anything you want
+    runs-on: ubuntu-latest
+
+    steps:
+      #################################################
+      # Checkout code for the VM checking your repo   #
+      #################################################
+      - name: Checkout Code
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b #using the SHA value for added security, found in set up job step
+        with:
+          fetch-depth: 0
+      ###########################################
+      # Run Super-Linter Slim against code base #
+      ##
+      ## If there is a new job, make it - and then create
+      ## new one.
+      ###########################################
+      - name: Super-Linter Slimv4
+        #calling the Super-Linter slimv4 to exclude rust,dotenv,armttk,pwsh,and c# linters
+        uses: github/super-linter/slim@2d64ac1c067c34beaf7d24cc12733cd46236f76e #using the SHA value for added security, found in set up job step
+        env:
+          VALIDATE_ALL_CODEBASE: false #set this to true if you want to test your entire code base even if there are not changes, or false if not
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          #ACTIONS_RUNNER_DEBUG: true   #in case of needing to debug issues with runner
+          ###################################################
+          # Omit languages you dont want the linter to lint #
+          ###################################################
+          #VALIDATE_ANSIBLE: false
+          #VALIDATE_ARM: false
+          #VALIDATE_BASH: false
+          #VALIDATE_CLANG_FORMAT: false
+          #VALIDATE_CLOJURE: false
+          #VALIDATE_CLOUDFORMATION: false
+          #VALIDATE_DART: false
+          #VALIDATE_GO: false
+          #VALIDATE_GOOGLE_JAVA_FORMAT: false
+          #VALIDATE_GROOVY: false
+          #VALIDATE_KUBERNETES_KUBEVAL: false
+          #VALIDATE_PERL: false
+          #VALIDATE_POWERSHELL: false
+          #VALIDATE_PROTOBUF: false
+          #VALIDATE_TYPESCRIPT_ES: false
+          #VALIDATE_TYPESCRIPT_STANDARD: false
+          #VALIDATE_CSS: false
+          #VALIDATE_YAML: false
+          #VALIDATE_KOTLIN: false
+          #VALIDATE_JAVASCRIPT_ESL: false
+          #VALIDATE_JAVASCRIPT_STANDARD: false
+          #VALIDATE_JAVA: false
+          VALIDATE_YAML: false;
+          ###################################################
+          # Rules for your linters in Super Linter          #
+          ##################################################

@@ -1,0 +1,126 @@
+/* Media Query */
+@media (max-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+    .navbar{
+        bottom: 0;
+        width: 100%;
+        transition: height 300ms ease;
+        position: fixed; 
+        height: 15%;
+    }
+    .link-text .link-logo .logo {
+        display: none;
+    }
+    .navbar:hover {
+        height: 70%;
+        width: 100vw;
+        overflow-y: scroll;
+    }
+    .logo .icon {
+        transform: rotate(90deg);
+        transition: transform 600ms;
+    }
+    .navbar:hover .logo .icon {
+        transform: rotate(-90deg);
+    }
+    main{
+        font-size: 14px;
+        margin: 0;
+    }
+    .projects-container{
+        flex-direction: column;
+        max-width: max-content;
+        margin-left: 0 !important;
+    }
+    .skills_title{
+        margin-top: 0;
+    }
+    body{
+        padding-bottom: 100px;
+    }
+}/* END MEDIA QUERY */
+/* medium Screen */
+@media (max-width:480px)  { /* smartphones, Android phones, landscape iPhone */
+    .navbar{
+        bottom: 0;
+        width: 100%;
+        transition: height 300ms ease;
+        position: fixed; 
+        height: 15%;
+    }
+    .link-text .link-logo .logo {
+        display: none;
+    }
+    .navbar:hover {
+        height: 70%;
+        width: 100vw;
+        overflow-y: scroll;
+    }
+    .logo .icon {
+        transform: rotate(90deg);
+        transition: transform 600ms;
+    }
+    .navbar:hover .logo .icon {
+        transform: rotate(-90deg);
+    }
+    main{
+        font-size: 14px;
+        margin: 0;
+    }
+    .projects-container{
+        flex-direction: column;
+        max-width: max-content;
+        margin-left: 0 !important;
+    }
+    .skills_title{
+        margin-top: 0;
+    }
+    body{
+        padding-bottom: 100px;
+    }
+}/* END MEDIA QUERY */
+
+/* Large Screen */
+@media(max-width: 600px) {
+    .navbar{
+        bottom: 0;
+        width: 100%;
+        transition: height 300ms ease;
+        position: fixed; 
+        height: 15%;
+    }
+    .link-text .link-logo .logo {
+        display: none;
+    }
+    .navbar:hover {
+        height: 70%;
+        width: 100vw;
+        overflow-y: scroll;
+    }
+    main{
+        font-size: 14px;
+    }
+    .projects-container{
+        flex-direction: column;
+        max-width: max-content;
+        margin-left: 0 !important;
+    }
+    .skills_title{
+        margin-top: 0;
+    }
+    body{
+        padding-bottom: 100px;
+    }
+    .logo .icon {
+        transform: rotate(90deg);
+        transition: transform 600ms;
+    }
+    .navbar:hover .logo .icon {
+        transform: rotate(-90deg);
+    }
+    main{
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+
