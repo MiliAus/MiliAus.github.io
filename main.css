@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  transition: 500ms ease-in-out, color 1000ms ease-in-out;
+  transition: 0.25s;
 }
 
 main {
@@ -59,7 +59,9 @@ main {
   margin-left: 8rem;
 }
 
-.top, .mid, .bot {
+.top,
+.mid,
+.bot {
   max-width: fit-content;
   margin-left: inherit;
 }
@@ -85,7 +87,6 @@ main {
 
 .home_page {
   opacity: 1;
-  transition: 500ms;
 }
 
 .contact {
@@ -108,7 +109,8 @@ main {
   cursor: pointer;
 }
 
-#linkedin, #github {
+#linkedin,
+#github {
   cursor: pointer;
 }
 
@@ -215,7 +217,8 @@ main {
 }
 
 /* Media Query */
-@media (max-width: 320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .navbar {
     bottom: 0;
     width: 100%;
@@ -255,9 +258,11 @@ main {
   body {
     padding-bottom: 100px;
   }
-} /* END MEDIA QUERY */
+}
+/* END MEDIA QUERY */
 /* medium Screen */
-@media (max-width: 480px) { /* smartphones, Android phones, landscape iPhone */
+@media (max-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
   .navbar {
     bottom: 0;
     width: 100%;
@@ -297,7 +302,8 @@ main {
   body {
     padding-bottom: 100px;
   }
-} /* END MEDIA QUERY */
+}
+/* END MEDIA QUERY */
 /* Large Screen */
 @media (max-width: 600px) {
   .navbar {
@@ -315,7 +321,6 @@ main {
     height: 70%;
     width: 100vw;
     overflow-y: scroll;
-    z-index: 1;
   }
   main {
     font-size: 14px;

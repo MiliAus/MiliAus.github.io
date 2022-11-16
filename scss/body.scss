@@ -4,25 +4,27 @@
 
 html {
     overflow-x: hidden;
-  }
+}
 
 /*  whole webpage styling */
-body {   
+body {
     background: var(--bg);
     color: var(--text);
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    transition: 500ms ease-in-out, color 1000ms ease-in-out;
-    
+    transition: .25s;
+
 }
-main{
+
+main {
     padding: 1rem;
 }
+
 /*########################## THEMES ##########################*/
 :root {
     font-size: 22px;
-    font-family: 'BIZ UDPMincho', serif; 
+    font-family: 'BIZ UDPMincho', serif;
     font-style: normal;
     font-weight: 400;
 
@@ -36,6 +38,7 @@ main{
     --light-dark: #23232e;
 
 }
+
 /*  webpage scrollbar styling */
 
 
@@ -45,75 +48,86 @@ main{
     min-height: fit-content;
     margin-left: 8rem;
 }
+
 @mixin bio {
     max-width: fit-content;
 }
+
 @mixin borders {
     border-style: solid;
     border: 1 1 #141418;
     border-radius: 2px;
 }
-.grid-container{
+
+.grid-container {
     display: grid;
-    gap:1rem;
+    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     padding-top: 109px;
 }
-.home{
+
+.home {
     @include pages;
     line-height: 90px;
     margin-bottom: 0px;
     margin-left: 28%;
     //change when done with other pages     
-} 
-.pic{
+}
+
+.pic {
     @include pages;
 }
-.top, .mid, .bot{
+
+.top,
+.mid,
+.bot {
     @include bio;
     margin-left: inherit;
-    
+
 }
-.top{
+
+.top {
     font-size: xxx-large;
     margin-bottom: 0px;
 }
-.mid{
+
+.mid {
     font-size: 128px;
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.bot{
+
+.bot {
     font-size: 24px;
     line-height: 30px;
     margin-left: 0px;
     margin-bottom: 0px;
 }
 
-.home_page{
- opacity: 1;
- transition: 500ms;
+.home_page {
+    opacity: 1;
+
 }
 
-.contact{
+.contact {
     @include pages;
     display: none;
 }
- .icons{
-     margin-top: 0px;
-     margin-left: 145px;
-     word-spacing: 21px;
- }
-.resume{
+
+.icons {
+    margin-top: 0px;
+    margin-left: 145px;
+    word-spacing: 21px;
+}
+
+.resume {
     width: 126px;
     border-radius: 10px;
     cursor: pointer;
 }
-#linkedin,#github {
+
+#linkedin,
+#github {
     cursor: pointer;
 }
-
-
-
-

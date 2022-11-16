@@ -1,15 +1,17 @@
-.skills{
+.skills {
     display: block;
-    
-    
+
+
 }
-.skills_title{
+
+.skills_title {
     font-size: xxx-large;
     text-align: center;
     margin-bottom: 5px;
 
 }
-table{
+
+table {
     text-align: center;
     line-height: 300%;
     display: flex;
@@ -18,21 +20,23 @@ table{
 
 }
 
-td{
+td {
     padding: 0 100px;
 }
-.skills-container{
+
+.skills-container {
     display: grid;
-    gap:1rem;
+    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     padding-top: 28px;
 }
+
 .tooltip {
     position: relative;
     display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.tooltip .tooltiptext {
     visibility: hidden;
     padding: 0.25em 0.5em;
     background-color: black;
@@ -40,16 +44,16 @@ td{
     text-align: center;
     border-radius: 0.25em;
     white-space: nowrap;
-    
+
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
     transition-property: visibility;
     transition-delay: 0s;
     margin-left: 5px;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
     transition-delay: 0.1s;
-  }
+}

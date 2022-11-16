@@ -23,18 +23,14 @@ function turnDark() {
 
   if (document.getElementById("dark-icon") != null) {
     (document.getElementById("dark-icon").src = "assets/Sun.png") &&
-      (document.getElementById("dark-icon").id = "light-icon"); //change the icon to Moon for dark mode
+    (document.getElementById("dark-icon").id = "light-icon"); //change the icon to Moon for dark mode
     document.getElementById("dark").id = "light";
   }
 
   myUrl = window.location.href; // get the url
   lastWordInUrl = myUrl.substring(myUrl.lastIndexOf("/") + 1, myUrl.length); // get last word of url
 
-  if (
-    document.getElementById(
-      "linkedin" || document.getElementById("github") != null
-    )
-  ) {
+  if (document.getElementById("linkedin" || document.getElementById("github") != null)) {
     document.getElementById("linkedin").style.fill = "black";
     document.getElementById("github").style.fill = "black";
   }
